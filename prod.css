@@ -1,0 +1,209 @@
+body {
+    display: grid;
+    grid-template-areas:"cabeca cabeca" "braco braco" "corpo corpo" "pe pe";
+    grid-template-rows: 150px 50px auto 100px;
+    grid-template-columns: 1fr;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: cabeca;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    color: rgb(216, 202, 5);
+    font-family: 'Batman Forever';
+}
+
+.logotipo {
+    width: 200px;
+    height: 200px;
+}
+
+aside {
+    grid-area: braco;
+    background-color: rgb(216, 202, 5);
+}
+
+.menu_lateral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.botao_menu {
+    background-color: black;
+    color: rgb(216, 202, 5);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+main {
+    grid-area: corpo;
+    background-color: rgb(9, 9, 46);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.model {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    background-color: rgb(0, 0, 114);
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+.imagem_produto {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.info_produto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.d_produto {
+    color: white;
+    font-size: 50px;
+    margin: 0;
+}
+
+.p_produto {
+    color: rgb(216, 219, 0);
+    font-size: 40px;
+}
+
+.desc_produto {
+    color: #ccc;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.botao_produto {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    grid-area: pe;
+    background-color: black;
+}
+
+h5 {
+    place-items: center;
+    color: white;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'Batman Forever';
+    src: url(Imgs/batman_forever/batmfa__.ttf);
+}
+
+@media only screen and (max-width: 850px) {
+    body {
+        display: grid;
+        grid-template-areas: "cabeca" "braco" "corpo" "pe";
+        grid-template-rows: 100px 50px auto 100px;
+        grid-template-columns: auto;
+        margin: 0;
+    }
+
+    .logotipo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .model {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .info_produto {
+        align-items: center;
+    }
+
+    .imagem_produto {
+        max-width: 350px;
+    }
+
+    .d_produto {
+        font-size: 35px;
+    }
+
+    .p_produto {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    body {
+        display: grid;
+        grid-template-areas: "cabeca" "braco" "corpo" "pe";
+        grid-template-rows: 90px 50px auto 100px;
+        grid-template-columns: auto;
+        margin: 0;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .logotipo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .menu_lateral {
+        gap: 10px;
+    }
+
+    .model {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .imagem_produto {
+        max-width: 250px;
+    }
+
+    .d_produto {
+        font-size: 25px;
+    }
+
+    .p_produto {
+        font-size: 20px;
+    }
+
+    .desc_produto {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .botao_produto {
+        width: 100%;
+    }
+}
